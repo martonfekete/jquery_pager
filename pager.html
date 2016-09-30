@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="demo.css" />
 </head>
 <body>
-<div class="pager-wrapper">
+<div id="pager-wrapper">
 	<ul>
 		<li>
 			<img src="https://unsplash.it/400" />
@@ -57,13 +57,22 @@
 			<p class="caption"></p>
 		</li>
 	</ul>
-	<nav>
-		<button id="less">&lt;&lt;</button>
-		<button id="more">&gt;&gt;</button>
-	</nav>
+
 </div>
 <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-<script type="text/javascript" src="jquery-pager.js">
+<script type="text/javascript" src="jquery-pager-plugin.js"></script>
+<!--script type="text/javascript" src="jquery-pager.js"></script-->
+<script>
+$( "#pager-wrapper ul li" ).addPager({
+	wrapperId: 'pager-wrapper',
+	itemPerPage: 3,
+	navColor: 'orange',
+	navBackgroundColor: '#eee',
+	navTextLess: '<<',
+	navTextMore: '>>',
+	navAlign: 'center',
+	navButtonMargin: '0 .5em'
+});
 </script>
 </body>
 </html>
