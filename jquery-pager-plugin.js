@@ -14,6 +14,7 @@
             // Pager settings
             wrapperId: 'pager-wrapper',
             itemPerPage: 5,
+            showIdCaptions: false,
             // Nav defaults
             navTextLess: 'prev',
             navTextMore: 'more',
@@ -28,8 +29,10 @@
         this.each( function(i) {
             $(this).attr('id','img-id' + i);
             id = $(this).attr('id');
-            caption = $(this).find('.caption');
-            $(caption).text(id);
+            if (settings.showIdCaptions) {
+                caption = $(this).find('.caption');
+                $(caption).text(id);
+            }
             itemsInPager.push(id);
         });
 
