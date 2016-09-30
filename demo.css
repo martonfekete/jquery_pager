@@ -1,0 +1,28 @@
+.pager-wrapper {
+	width:800px;
+}
+ul {
+	list-style-type: none;
+	margin:0;
+}
+li {
+	display:inline-block;
+	margin:1em;
+	width:200px;
+	overflow:hidden;
+}
+li img {
+	width:100%;
+}
+li p {
+	text-align: center;
+}
+
+nav {
+	width: 100%;
+	text-align:center;
+}
+nav button {
+	display:none;
+	margin:0 .2em;
+}
